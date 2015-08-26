@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class P2point5
 {
-//wow what a cool test
+
 	public static void main(String[] args)
 	{
 		System.out.print("The winning numbers are: ");
