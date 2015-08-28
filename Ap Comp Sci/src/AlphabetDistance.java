@@ -19,7 +19,6 @@ public class AlphabetDistance
 		int[] array = new int[s.length()];
 		for (int i = 0; i < s.length(); i++)
 		{
-			// System.out.println(i);
 			array[i] = (int) s.charAt(i) - 96;
 		}
 		return array;
