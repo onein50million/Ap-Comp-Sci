@@ -1,4 +1,3 @@
-
 public class AlphabetDistance
 {
 
@@ -6,17 +5,48 @@ public class AlphabetDistance
 	{
 		String s = "hello world";
 		int[] numbers = GetNums(s);
+		int[] dist = Distances(numbers);
+		for (int i = 0; i < dist.length; i++)
+		{
+			System.out.println(dist[i]);
+		}
 	}
-	
+
 	public static int[] GetNums(String s)
 	{
-		int[] array;
-		array = new int[s.length() - 1];
-		for (int i = 0; i < s.length() - 1; i++)
+		s = s.replaceAll("\\s", "");
+		s = s.toLowerCase();
+		int[] array = new int[s.length()];
+		for (int i = 0; i < s.length(); i++)
 		{
-			array[i] = (int)s.charAt(i) - 96;
+			// System.out.println(i);
+			array[i] = (int) s.charAt(i) - 96;
 		}
 		return array;
+	}
+
+	public static int[] Distances(int[] nums)
+	{
+		int[] dist = new int[nums.length / 2];
+		int add = nums.length / 2;
+		for (int i = 0; i < nums.length / 2; i++)
+		{
+			int a = nums[i];
+			int b = nums[i + add];
+			if (a < b)
+			{
+				dist[i] = b - a;
+			}
+			else if (a > b)
+			{
+				dist[i] = 26 - a + b;
+			}
+			else
+			{
+				dist[i] = 0;
+			}
+		}
+		return dist;
 	}
 
 }
