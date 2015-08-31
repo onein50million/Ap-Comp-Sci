@@ -1,4 +1,3 @@
-
 public class ElevenRules
 {
 
@@ -13,30 +12,32 @@ public class ElevenRules
 		for (int i = 0; i < nums.length; i++)
 		{
 			eleven(nums[i]);
+			System.out.println("");
 		}
 	}
-	
+
 	public static void eleven(long n)
 	{
-		for (int i = 0; i <= String.valueOf(n).length(); i++)
+		while (String.valueOf(n).length() > 2)
 		{
 			System.out.print(n + "    ");
 			String str = String.valueOf(n);
-			long smallN = Integer.parseInt(str.substring(0, str.length() - 1));
-			long endnum = Integer.parseInt(str.substring(str.length() - 1, str.length()));
+			long smallN = Long.parseLong(str.substring(0, str.length() - 1));
+			long endnum = Long.parseLong(str.substring(str.length() - 1, str.length()));
 			System.out.println(smallN + " - " + endnum);
 			n = smallN - endnum;
 		}
 		System.out.print(n + "    ");
-		if(CheckEleven(n))
+		if (CheckEleven(n))
 		{
 			System.out.println("Yes");
-		}
+		} 
 		else
 		{
 			System.out.println("No");
 		}
 	}
+
 	public static boolean CheckEleven(long n)
 	{
 		String str = String.valueOf(n);
