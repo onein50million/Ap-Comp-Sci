@@ -4,11 +4,11 @@ public class ElevenRules
 	public static void main(String[] args)
 	{
 		long[] nums = new long[5];
-		nums[0] = 353727;
+		nums[0] = 353727l;
 		nums[1] = 7643268910l;
 		nums[2] = 6123590234l;
 		nums[3] = 1358024679121l;
-		nums[4] = 6380;
+		nums[4] = 6380l;
 		for (int i = 0; i < nums.length; i++)
 		{
 			eleven(nums[i]);
