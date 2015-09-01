@@ -1,5 +1,5 @@
 
-public class StudentTest
+public class P3point4
 {
 
 	public static void main(String[] args)
