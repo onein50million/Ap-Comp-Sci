@@ -1,6 +1,5 @@
 public class ElevenRules
 {
-	// Test test for pull in comp sci
 	public static void main(String[] args)
 	{
 		long[] nums = new long[5];
