@@ -1,6 +1,6 @@
 public class ElevenRules
 {
-
+	// Test test for pull in comp sci
 	public static void main(String[] args)
 	{
 		long[] nums = new long[5];
@@ -31,7 +31,7 @@ public class ElevenRules
 		if (CheckEleven(n))
 		{
 			System.out.println("Yes");
-		} 
+		}
 		else
 		{
 			System.out.println("No");
