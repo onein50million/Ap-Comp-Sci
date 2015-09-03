@@ -10,8 +10,8 @@ public class P3point4
 		student.addQuiz(90);
 		student.addQuiz(87);
 		student.addQuiz(93);
-		System.out.println(student.getTotalScore());
-		System.out.println(student.getAverageScore());
+		System.out.println("Total score: " + student.getTotalScore());
+		System.out.println("Average score: " + student.getAverageScore());
 	}
 
 }
