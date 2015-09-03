@@ -1,7 +1,6 @@
 
 import java.util.Random;
 
-// Test
 public class P2point5
 {
 
