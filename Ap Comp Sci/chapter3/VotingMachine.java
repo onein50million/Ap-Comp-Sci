@@ -9,7 +9,7 @@ public class VotingMachine
 	int Rvotes;
 	
 	/**
-	 * Adds votes to the democratic party
+	 * Adds votes to the Democratic party
 	 * @param n number of votes to add
 	 */
 	public void addDvote(int n)
@@ -18,7 +18,7 @@ public class VotingMachine
 	}
 	
 	/**
-	 * Adds votes to the republican party
+	 * Adds votes to the Republican party
 	 * @param n number of votes to add
 	 */
 	public void addRvote(int n)
