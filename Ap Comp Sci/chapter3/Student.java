@@ -48,7 +48,7 @@ public class Student
 	}
 	
 	/**
-	 * Add's a quiz to the student's score
+	 * Adds a quiz to the student's score and updates Student.average and Student.score
 	 * @param score the score the student received on the test
 	 */
 	public void addQuiz(int score)
