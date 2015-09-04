@@ -12,9 +12,12 @@ public class GetInGear
 	
 	public static long getSpins(int[] gears)
 	{
-		double spins = gears[gears.length - 1] / gears[0];
-		long ratio = Math.round(spins);
-		return 10l * ratio;
+		double spins = 10;
+		for (int i = 0; i < gears.length - 1; i++)
+		{
+			spins = spins * ((double) gears[i] / gears[i + 1]);
+		}
+		return Math.round(spins);
 	}
 	
 	public static String getDirection(int[] gears)
