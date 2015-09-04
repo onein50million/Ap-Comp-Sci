@@ -29,7 +29,7 @@ public class AlphabetDistance
 	{
 		int add = nums.length / 2;
 		int[] dist = new int[add];
-		for (int i = 0; i < nums.length / 2; i++)
+		for (int i = 0; i < add; i++)
 		{
 			int a = nums[i];
 			int b = nums[i + add];
