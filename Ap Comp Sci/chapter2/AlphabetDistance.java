@@ -27,8 +27,8 @@ public class AlphabetDistance
 
 	public static int[] Distances(int[] nums)
 	{
-		int[] dist = new int[nums.length / 2];
 		int add = nums.length / 2;
+		int[] dist = new int[add];
 		for (int i = 0; i < nums.length / 2; i++)
 		{
 			int a = nums[i];
