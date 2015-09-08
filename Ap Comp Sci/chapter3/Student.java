@@ -6,7 +6,7 @@
 public class Student
 {
 	String name;
-	int score;
+	double score;
 	double average;
 	int quizN;
 	
@@ -33,7 +33,7 @@ public class Student
 	 * Returns the student's total score
 	 * @return the sum of all test scores
 	 */
-	public int getTotalScore()
+	public double getTotalScore()
 	{
 		return this.score;
 	}
@@ -51,10 +51,10 @@ public class Student
 	 * Adds a quiz to the student's score and updates Student.average and Student.score
 	 * @param score the score the student received on the test
 	 */
-	public void addQuiz(int score)
+	public void addQuiz(double score)
 	{
 		this.quizN += 1;
 		this.score += score;
-		this.average = this.score / this.quizN;
+		this.average = (double) this.score / this.quizN;
 	}
 }
