@@ -1,11 +1,8 @@
 
 public class BankAccount
 {
-	//TODO Ask about what was supposed to be here in the first place
-	
 	double balance;
 	double fee;
-	int startingFree;
 	int free;
 	int charges;
 	
@@ -20,8 +17,7 @@ public class BankAccount
 		this.balance = balance;
 		this.fee = fee;
 		this.charges = 0;
-		this.startingFree = free;
-		this.free = this.startingFree;
+		this.free = free;
 	}
 	
 	/**
@@ -31,6 +27,7 @@ public class BankAccount
 	 */
 	public double Withdraw(double ammount)
 	{
+		this.charges += 1;
 		this.balance -= ammount;
 		return ammount;
 	}
@@ -41,23 +38,8 @@ public class BankAccount
 	 */
 	public void Deposit(double ammount)
 	{
-		Deduct();
+		this.charges += 1;
 		this.balance += ammount;
-	}
-	
-	/**
-	 * Calculates number of free transactions left 
-	 */
-	private void Deduct()
-	{
-		if (this.free > 0)
-		{
-			this.free -= 1;
-		}
-		else
-		{
-			this.charges += 1;
-		}
 	}
 	
 	/**
@@ -65,8 +47,7 @@ public class BankAccount
 	 */
 	public void Monthly()
 	{
-		this.balance -= this.charges * this.fee;
+		this.balance -= Math.max(Math.max(charges, free) - free, 0);
 		this.charges = 0;
-		this.free = this.startingFree;
 	}
 }
