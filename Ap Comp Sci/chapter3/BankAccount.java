@@ -1,10 +1,10 @@
 
 public class BankAccount
 {
-	double balance;
-	double fee;
-	int free;
-	int charges;
+	private double balance;
+	private double fee;
+	private int free;
+	private int charges;
 	
 	/**
 	 * Initializes a bank account
@@ -42,12 +42,17 @@ public class BankAccount
 		this.balance += ammount;
 	}
 	
+	public double getBalance()
+	{
+		return this.balance;
+	}
+	
 	/**
 	 * Deducts for number of non-free transactions and resets values
 	 */
 	public void Monthly()
 	{
-		this.balance -= Math.max(Math.max(charges, free) - free, 0);
+		this.balance -= Math.max(Math.max(charges, free) - free, 0) * this.fee;
 		this.charges = 0;
 	}
 }

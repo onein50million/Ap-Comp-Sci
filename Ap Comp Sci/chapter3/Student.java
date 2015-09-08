@@ -5,10 +5,10 @@
  */
 public class Student
 {
-	String name;
-	double score;
-	double average;
-	int quizN;
+	private String name;
+	private double score;
+	private double average;
+	private int quizN;
 	
 	/**
 	 * Creates a new student

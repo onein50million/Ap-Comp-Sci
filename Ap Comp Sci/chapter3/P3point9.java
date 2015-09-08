@@ -18,7 +18,7 @@ public class P3point9
 		bank.Deposit(10);
 		bank.Deposit(10);
 		bank.Monthly();
-		System.out.println(bank.balance);
+		System.out.println(bank.getBalance());
 	}
 	
 	public static void Test2()
@@ -28,7 +28,7 @@ public class P3point9
 		bank.Deposit(10);
 		bank.Deposit(10);
 		bank.Monthly();
-		System.out.println(bank.balance);
+		System.out.println(bank.getBalance());
 	}
 
 }

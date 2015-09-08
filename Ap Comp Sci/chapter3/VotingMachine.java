@@ -5,8 +5,8 @@
  */
 public class VotingMachine
 {
-	int Dvotes;
-	int Rvotes;
+	private int Dvotes;
+	private int Rvotes;
 	
 	/**
 	 * Adds votes to the Democratic party
