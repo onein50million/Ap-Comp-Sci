@@ -4,14 +4,14 @@ public class P3point9
 
 	public static void main(String[] args)
 	{
-		Test1();
-		Test2();
+		BankAccount bank = new BankAccount(0, 1, 3);
+		Test1(bank);
+		Test2(bank);
 	}
 	
-	public static void Test1()
+	public static void Test1(BankAccount bank)
 	{
 		// 5 transactions charge of 2 dollars
-		BankAccount bank = new BankAccount(0, 1, 3);
 		bank.Deposit(10);
 		bank.Deposit(10);
 		bank.Deposit(10);
@@ -21,10 +21,9 @@ public class P3point9
 		System.out.println(bank.getBalance());
 	}
 	
-	public static void Test2()
+	public static void Test2(BankAccount bank)
 	{
 		// 2 transactions no fee charges
-		BankAccount bank = new BankAccount(25, 1, 3);
 		bank.Deposit(10);
 		bank.Withdraw(10);
 		bank.Monthly();
