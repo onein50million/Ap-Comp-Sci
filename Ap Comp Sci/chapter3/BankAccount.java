@@ -22,19 +22,19 @@ public class BankAccount
 	
 	/**
 	 * Withdraws money from this.balance
-	 * @param ammount Ammount to withdraw
-	 * @return ammount withdrawn
+	 * @param amount Amount to withdraw
+	 * @return amount withdrawn
 	 */
-	public double Withdraw(double ammount)
+	public double Withdraw(double amount)
 	{
 		this.charges += 1;
-		this.balance -= ammount;
-		return ammount;
+		this.balance -= amount;
+		return amount;
 	}
 	
 	/**
 	 * Deposits money to this.balance
-	 * @param ammount Ammount to deposit
+	 * @param ammount Amount to deposit
 	 */
 	public void Deposit(double ammount)
 	{

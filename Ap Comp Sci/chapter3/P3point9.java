@@ -16,7 +16,7 @@ public class P3point9
 		bank.Deposit(10);
 		bank.Deposit(10);
 		bank.Deposit(10);
-		bank.Deposit(10);
+		bank.Withdraw(10);
 		bank.Monthly();
 		System.out.println(bank.getBalance());
 	}
@@ -24,9 +24,9 @@ public class P3point9
 	public static void Test2()
 	{
 		// 2 transactions no fee charges
-		BankAccount bank = new BankAccount(0, 1, 3);
+		BankAccount bank = new BankAccount(25, 1, 3);
 		bank.Deposit(10);
-		bank.Deposit(10);
+		bank.Withdraw(10);
 		bank.Monthly();
 		System.out.println(bank.getBalance());
 	}
