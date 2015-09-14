@@ -1,3 +1,4 @@
+package p3point4;
 /**
  * 
  * Keeps track of student scores
