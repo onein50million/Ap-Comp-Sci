@@ -9,14 +9,14 @@ public class StarViewer
 	{
 		JFrame frame = new JFrame();
 
-	      frame.setSize(500, 500);
-	      frame.setTitle("Three stars");
-	      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-	      StarComponent component = new StarComponent();
-	      frame.add(component);
-
-	      frame.setVisible(true);
+		frame.setSize(500, 500);
+		frame.setTitle("Three stars");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		StarComponent component = new StarComponent();
+		frame.add(component);
+		
+		frame.setVisible(true);
 	}
 
 }
