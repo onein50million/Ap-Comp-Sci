@@ -1,5 +1,10 @@
 package p3point2;
 
+/**
+ * 
+ * A cash register that handles transactions, tax, and change
+ *
+ */
 public class CashRegister
 {
 	private int cents;
