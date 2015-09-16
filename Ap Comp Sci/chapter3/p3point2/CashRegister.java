@@ -1,4 +1,4 @@
-package p3point1;
+package p3point2;
 
 public class CashRegister
 {
