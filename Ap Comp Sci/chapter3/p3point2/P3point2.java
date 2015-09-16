@@ -24,7 +24,7 @@ public class P3point2
 		cash.PurchaseItem(15, false);
 		cash.Pay(50);
 		System.out.println("Item count: " + cash.getItemCount());
-		System.out.println(cash.recieveChange());
+		System.out.println("Change: " + cash.recieveChange());
 	}
 	
 	public static void Test2(CashRegister cash)
@@ -34,7 +34,7 @@ public class P3point2
 		cash.PurchaseItem(10, true);
 		cash.Pay(100);
 		System.out.println("Item count: " + cash.getItemCount());
-		System.out.println(cash.recieveChange());
+		System.out.println("Change: " + cash.recieveChange());
 	}
 	
 	public static void Test3(CashRegister cash)
@@ -44,8 +44,8 @@ public class P3point2
 		cash.PurchaseItem(12.45, true);
 		cash.PurchaseItem(34.56, true);
 		cash.Pay(50);
-		System.out.println(cash.recieveChange());
-		System.out.println(cash.Reset());
+		System.out.println("Change: " + cash.recieveChange());
+		System.out.println("Money returned: " + cash.Reset());
 	}
 	
 	public static void Test4(CashRegister cash)
@@ -55,9 +55,9 @@ public class P3point2
 		cash.PurchaseItem(11.35, true);
 		cash.PurchaseItem(34.56, false);
 		cash.Pay(50);
-		System.out.println(cash.recieveChange());
+		System.out.println("Change: " + cash.recieveChange());
 		cash.Pay(105);
-		System.out.println(cash.recieveChange());
+		System.out.println("Change: " + cash.recieveChange());
 	}
 
 }
