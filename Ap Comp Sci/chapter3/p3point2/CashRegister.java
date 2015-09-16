@@ -34,7 +34,7 @@ public class CashRegister
 	 */
 	public double Reset()
 	{
-		double tempCents = this.cents;
+		double tempCents = this.payedCents;
 		this.payedCents = 0;
 		this.cents = 0;
 		this.itemCount = 0;
