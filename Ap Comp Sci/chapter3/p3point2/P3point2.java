@@ -14,6 +14,9 @@ public class P3point2
 		Test3(cash);
 		System.out.println("\nTest 4 (not enough money payed, guy pays more): ");
 		Test4(cash);
+		System.out.println("\nMr N's test: ");
+		CashRegister cash2 = new CashRegister(.10);
+		MrNTest(cash2);
 	}
 	
 	public static void Test1(CashRegister cash)
@@ -58,6 +61,18 @@ public class P3point2
 		System.out.println("Change: " + cash.recieveChange());
 		cash.Pay(105);
 		System.out.println("Change: " + cash.recieveChange());
+	}
+	
+	public static void MrNTest(CashRegister cash)
+	{
+		cash.PurchaseItem(29.50, false);
+		cash.PurchaseItem(9.25, true);
+		cash.PurchaseItem(4, false);
+		cash.PurchaseItem(12.15, true);
+		cash.Pay(60);
+		System.out.println("Item count: " + cash.getItemCount());
+		System.out.println("Tax: $" + cash.getTax());
+		System.out.println("Change: $" + cash.recieveChange());
 	}
 
 }

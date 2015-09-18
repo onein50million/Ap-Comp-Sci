@@ -11,6 +11,7 @@ public class CashRegister
 	private int payedCents;
 	private int itemCount;
 	private double tax;
+	private int taxTotal;
 
 	/**
 	 * Generates a cash register with specific tax rate
@@ -38,6 +39,7 @@ public class CashRegister
 		this.payedCents = 0;
 		this.cents = 0;
 		this.itemCount = 0;
+		this.taxTotal = 0;
 		return tempCents / 100;
 	}
 	
@@ -52,6 +54,7 @@ public class CashRegister
 		if (tax)
 		{
 			this.cents += (int) Math.round(cents * this.tax);
+			this.taxTotal += (int) Math.round(cents * (this.tax - 1));
 		}
 		else
 		{
@@ -94,6 +97,11 @@ public class CashRegister
 	public int getItemCount()
 	{
 		return this.itemCount;
+	}
+	
+	public double getTax()
+	{
+		return (double) this.taxTotal / 100;
 	}
 
 }
