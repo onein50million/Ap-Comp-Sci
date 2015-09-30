@@ -15,7 +15,7 @@ public class AlphabetDistance
 
 	public static int[] GetNums(String s)
 	{
-		s = s.replaceAll("\\s", "");
+		s = s.replace(" ", "");
 		s = s.toLowerCase();
 		int[] array = new int[s.length()];
 		for (int i = 0; i < s.length(); i++)
