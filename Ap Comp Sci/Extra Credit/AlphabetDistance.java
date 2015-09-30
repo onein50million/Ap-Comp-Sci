@@ -1,4 +1,3 @@
-
 public class AlphabetDistance
 {
 
@@ -36,12 +35,10 @@ public class AlphabetDistance
 			if (a < b)
 			{
 				dist[i] = b - a;
-			}
-			else if (a > b)
+			} else if (a > b)
 			{
 				dist[i] = 26 - a + b;
-			}
-			else
+			} else
 			{
 				dist[i] = 0;
 			}
