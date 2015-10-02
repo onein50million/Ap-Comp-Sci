@@ -7,13 +7,13 @@ public class P4point23
 	{
 		Balloon b = new Balloon();
 		b.addAir(100);
-		System.out.println("The radius is: " + b.getRadius());
-		System.out.println("The voulme is: " + b.getVoulme());
-		System.out.println("The surface area is: " + b.getSurfaceArea());
+		System.out.printf("The radius is: %.2f cm", b.getRadius());
+		System.out.printf("\nThe voulme is: %.2f cm³", b.getVoulme());
+		System.out.printf("\nThe surface area is: %.2f cm²", b.getSurfaceArea());
 		b.addAir(100);
-		System.out.println("\nThe radius is: " + b.getRadius());
-		System.out.println("The voulme is: " + b.getVoulme());
-		System.out.println("The surface area is: " + b.getSurfaceArea());
+		System.out.printf("\n\nThe radius is: %.2f cm", b.getRadius());
+		System.out.printf("\nThe voulme is: %.2f cm³", b.getVoulme());
+		System.out.printf("\nThe surface area is: %.2f cm²", b.getSurfaceArea());
 	}
 
 }
