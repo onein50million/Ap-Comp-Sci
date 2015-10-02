@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 
-public class p4point2
+public class P4point2
 {
 
 	public static void main(String[] args)

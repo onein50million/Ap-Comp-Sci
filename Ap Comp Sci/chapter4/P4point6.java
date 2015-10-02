@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class p4point6
+public class P4point6
 {
 
 	public static void main(String[] args)
