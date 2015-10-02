@@ -6,16 +6,27 @@ public class Balloon
 	private double sArea;
 	private double radius;
 	
-	public Balloon(double air)
+	/**
+	 * Constructs a balloon with a specific starting volume
+	 * @param volume starting volume
+	 */
+	public Balloon(double volume)
 	{
-		this.volume = air;
+		this.volume = volume;
 	}
 	
+	/**
+	 * Constructs and empty balloon
+	 */
 	public Balloon()
 	{
 		this.volume = 0;
 	}
 	
+	/**
+	 * Adds to the volume
+	 * @param amount amount of air to add in cubic centimeters
+	 */
 	public void addAir(double amount)
 	{
 		this.volume += amount;
@@ -33,16 +44,28 @@ public class Balloon
 		this.sArea = 4 * Math.PI * Math.pow(this.radius, 2);
 	}
 	
+	/**
+	 * Returns the radius
+	 * @return radius in centimeters
+	 */
 	public double getRadius()
 	{
 		return this.radius;
 	}
 	
+	/**
+	 * Returns the surface area
+	 * @return surface area in square centimeters
+	 */
 	public double getSurfaceArea()
 	{
 		return this.sArea;
 	}
 	
+	/**
+	 * Returns the volume
+	 * @return volume in cubic centimeters
+	 */
 	public double getVoulme()
 	{
 		return this.volume;
