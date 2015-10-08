@@ -3,10 +3,8 @@ public class Tests
 
 	public static void main(String[] args)
 	{
-		//Pers
-		String s = "Panthers";
-		int n = s.length();
-		String m = s.substring(0, 1) + s.substring(n - 3, n);
+		String s = "Mamey, Jean";
+		char m = s.charAt(s.length() - 1);
 		System.out.println(m);
 	}
 
