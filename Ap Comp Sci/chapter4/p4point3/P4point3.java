@@ -17,6 +17,7 @@ public class P4point3
 		double y2 = scan.nextDouble();
 		double x3 = scan.nextDouble();
 		double y3 = scan.nextDouble();
+		scan.close();
 		Triangle t = new Triangle(x1, y1, x2, y2, x3, y3);
 		System.out.printf("Perimeter: %.2f", t.getPerimeter());
 		lens = t.getSideLengths();
