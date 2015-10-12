@@ -10,7 +10,7 @@ public class P4point23
 		System.out.printf("The radius is: %.2f cm", b.getRadius());
 		System.out.printf("\nThe surface area is: %.2f cm²", b.getSurfaceArea());
 		System.out.printf("\nThe voulme is: %.2f cm³", b.getVoulme());
-		b.addAir(100);
+		b.addAir(50);
 		System.out.printf("\n\nThe radius is: %.2f cm", b.getRadius());
 		System.out.printf("\nThe surface area is: %.2f cm²", b.getSurfaceArea());
 		System.out.printf("\nThe voulme is: %.2f cm³", b.getVoulme());
