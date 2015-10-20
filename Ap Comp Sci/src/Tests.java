@@ -3,9 +3,9 @@ public class Tests
 
 	public static void main(String[] args)
 	{
-		String s = "Mamey, Jean";
-		char m = s.charAt(s.length() - 1);
-		System.out.println(m);
+		int x = 0;
+		int y = 0;
+		System.out.println(x == 0 ^ y == 0);
 	}
 
 }
