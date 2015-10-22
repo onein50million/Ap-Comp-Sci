@@ -70,12 +70,12 @@ public class P5point8
 		{
 			if (bool.equals("s"))
 			{
-				checking += n;
-				savings -= n;
+				checking -= n;
+				savings += n;
 			} else
 			{
-				savings += n;
-				checking -= n;
+				savings -= n;
+				checking += n;
 			}
 		}
 
