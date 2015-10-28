@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Extra Credit"/>
+	<classpathentry kind="src" path="KTANE"/>
 	<classpathentry kind="src" path="chapter2"/>
 	<classpathentry kind="src" path="chapter3"/>
 	<classpathentry kind="src" path="chapter4"/>
