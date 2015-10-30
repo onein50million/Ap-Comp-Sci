@@ -28,8 +28,14 @@ public class Password
 	private String password;
 	private Random r = new Random();
 	
+	public String getPassword()
+	{
+		return this.password;
+	}
+	
 	public void newPassword()
 	{
+		this.password = options[r.nextInt(options.length)];
 		while (!checkWord())
 		{
 			this.password = options[r.nextInt(options.length)];
@@ -38,41 +44,70 @@ public class Password
 			line3[0] = this.password.substring(2, 3);
 			line4[0] = this.password.substring(3, 4);
 			line5[0] = this.password.substring(4, 5);
-			generateLetters(line1);
-			generateLetters(line2);
-			generateLetters(line3);
-			generateLetters(line4);
-			generateLetters(line5);
+			line1 = generateLetters(line1);
+			line2 = generateLetters(line2);
+			line3 = generateLetters(line3);
+			line4 = generateLetters(line4);
+			line5 = generateLetters(line5);
 		}
 	}
 	
 	public String getLine(int n)
 	{
-		String s = "     ";
+		String[] s = {" ", " ", " ", " ", " "};
 		if (n == 0)
 		{
-			s = line1[0] + line1[1] + line1[2] + line1[3] + line1[4];
+			s = line1;;
 		}
 		else if (n == 1)
 		{
-			s = line2[0] + line2[1] + line2[2] + line2[3] + line2[4];
+			s = line2;
 		}
 		else if (n == 2)
 		{
-			s = line3[0] + line3[1] + line3[2] + line3[3] + line3[4];
+			s = line3;
 		}
 		else if (n == 3)
 		{
-			s = line4[0] + line4[1] + line4[2] + line4[3] + line4[4];
+			s = line4;
 		}
 		else if (n == 4)
 		{
-			s = line5[0] + line5[1] + line5[2] + line5[3] + line5[4];
+			s = line5;
+		}
+		return shuffleLine(s);
+	}
+	
+	private String shuffleLine(String[] line)
+	{
+		int[] fill = {0, 0, 0, 0, 0};
+		String s = "";
+		int n;
+		while (!done(fill))
+		{
+			n = r.nextInt(line.length);
+			if (fill[n] != 1)
+			{
+				fill[n] = 1;
+				s += line[n];
+			}
 		}
 		return s;
 	}
 	
-	private void generateLetters(String[] line)
+	private boolean done(int[] a)
+	{
+		for (int i = 0; i < a.length; i++)
+		{
+			if (a[i] != 1)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	private String[] generateLetters(String[] line)
 	{
 		while (!checkLine(line))
 		{
@@ -81,6 +116,7 @@ public class Password
 				line[i] = letters[r.nextInt(letters.length)];
 			}
 		}
+		return line;
 	}
 	
 	private boolean checkLine(String[] line)
@@ -115,9 +151,10 @@ public class Password
 					{
 						for (int e = 0; e < line5.length; e++)
 						{
+							String test = line1[a] + line2[b] + line3[c] + line4[d] + line5[e];
 							for (int i = 0; i < options.length; i++)
 							{
-								if ((line1[a] + line2[b] + line3[c] + line4[d] + line5[3]).equals(options[i]))
+								if (test.equals(options[i]) && !test.equals(this.password))
 								{
 									return false;
 								}
