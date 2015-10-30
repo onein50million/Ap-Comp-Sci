@@ -35,8 +35,7 @@ public class Password
 	
 	public void newPassword()
 	{
-		this.password = options[r.nextInt(options.length)];
-		while (!checkWord())
+		do
 		{
 			this.password = options[r.nextInt(options.length)];
 			line1[0] = this.password.substring(0, 1);
@@ -50,6 +49,7 @@ public class Password
 			line4 = generateLetters(line4);
 			line5 = generateLetters(line5);
 		}
+		while (!checkWord());
 	}
 	
 	public String getLine(int n)
@@ -137,10 +137,6 @@ public class Password
 	
 	private boolean checkWord()
 	{
-		if (line1[0].equals(""))
-		{
-			return false;
-		}
 		for (int a = 0; a < line1.length; a++)
 		{
 			for (int b = 0; b < line2.length; b++)
