@@ -52,7 +52,7 @@ public class Password
 		while (!checkWord());
 	}
 	
-	public String getLine(int n)
+	public String[] getLine(int n)
 	{
 		String[] s = {" ", " ", " ", " ", " "};
 		if (n == 0)
@@ -78,28 +78,26 @@ public class Password
 		return shuffleLine(s);
 	}
 	
-	private String shuffleLine(String[] line)
+	private String[] shuffleLine(String[] line)
 	{
-		int[] fill = {0, 0, 0, 0, 0};
-		String s = "";
+		String[] shuffled = {"", "", "", "", ""};
 		int n;
-		while (!done(fill))
+		while (!done(shuffled))
 		{
 			n = r.nextInt(line.length);
-			if (fill[n] != 1)
+			if (shuffled[n].equals(""))
 			{
-				fill[n] = 1;
-				s += line[n];
+				shuffled[n] = line[n];
 			}
 		}
-		return s;
+		return shuffled;
 	}
 	
-	private boolean done(int[] a)
+	private boolean done(String[] a)
 	{
 		for (int i = 0; i < a.length; i++)
 		{
-			if (a[i] != 1)
+			if (a[i].equals(""))
 			{
 				return false;
 			}

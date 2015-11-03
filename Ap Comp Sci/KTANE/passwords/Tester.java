@@ -14,7 +14,11 @@ public class Tester
 			p.newPassword();
 			for (int i = 0; i < 5; i++)
 			{
-				System.out.println(p.getLine(i));
+				for (String str : p.getLine(i))
+				{
+					System.out.print(str);
+				}
+				System.out.println();
 			}
 			password = (String) JOptionPane.showInputDialog("Enter password");
 			if (password.equals(p.getPassword()))

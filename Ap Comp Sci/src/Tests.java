@@ -1,12 +1,18 @@
+import java.util.Scanner;
+
 public class Tests
 {
 
 	public static void main(String[] args)
 	{
-		do
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter things: ");
+		String i = "";
+		while (scan.hasNext())
 		{
-			System.out.println("ha");
+			i += scan.next();
 		}
-		while (false);
+		System.out.println(i);
+		scan.close();
 	}
 }
