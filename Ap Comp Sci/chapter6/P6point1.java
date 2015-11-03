@@ -19,9 +19,9 @@ public class P6point1
 		System.out.println();
 		for (int i = a % 2 == 0 ? a : a + 1; i <= b; sum += i, i += 2);
 		System.out.println(sum + "\n");
-		for (int i = 1; i <= 10; System.out.println(i + " " + Math.round(Math.pow(i, 2))), i++);
+		for (int i = 1; i <= 10; System.out.printf("%-2d %-3d\n", i, i * i), i++);
 		System.out.println();
-		for (int i = a % 2 == 1 ? a : a + 1; i <= b; sum2 += Math.round(Math.pow(i, 2)), i += 2);
+		for (int i = a % 2 == 1 ? a : a + 1; i <= b; sum2 += i * i, i += 2);
 		System.out.println(sum2);
 	}
 
