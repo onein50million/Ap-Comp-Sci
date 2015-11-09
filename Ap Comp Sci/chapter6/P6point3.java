@@ -1,4 +1,3 @@
-
 public class P6point3
 {
 
@@ -22,7 +21,7 @@ public class P6point3
 		}
 		System.out.println(n);
 	}
-	
+
 	public static boolean checkPrime(int n)
 	{
 		for (int i = 2; i <= Math.round(n / 2); i++)
