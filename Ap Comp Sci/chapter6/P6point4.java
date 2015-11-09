@@ -1,5 +1,5 @@
 
-public class P6point3
+public class P6point4
 {
 
 	public static void main(String[] args)
