@@ -82,12 +82,14 @@ public class Password
 	{
 		String[] shuffled = {"", "", "", "", ""};
 		int n;
+		int i = 0;
 		while (!done(shuffled))
 		{
 			n = r.nextInt(line.length);
 			if (shuffled[n].equals(""))
 			{
-				shuffled[n] = line[n];
+				shuffled[n] = line[i];
+				i++;
 			}
 		}
 		return shuffled;
