@@ -7,14 +7,15 @@ public class Tester
 
 	public static void main(String[] args)
 	{
+		int[] givenLines = {1, 3, 4,};
 		Password p = new Password();
 		String password;
 		while (true)
 		{
 			p.newPassword();
-			for (int i = 0; i < 5; i++)
+			for (int i : givenLines)
 			{
-				for (String str : p.getLine(i))
+				for (String str : p.getLine(i - 1))
 				{
 					System.out.print(str);
 				}
