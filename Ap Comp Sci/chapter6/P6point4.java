@@ -1,10 +1,16 @@
+import java.util.Scanner;
+
 
 public class P6point4
 {
 
 	public static void main(String[] args)
 	{
-		int length = 5;
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Input length: ");
+		int length = scan.nextInt();
+		scan.close();
+		
 		Tables();
 		System.out.println();
 		Stars(length);

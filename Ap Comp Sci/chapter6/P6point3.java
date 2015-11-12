@@ -1,9 +1,15 @@
+import java.util.Scanner;
+
 public class P6point3
 {
 
 	public static void main(String[] args)
 	{
-		int n = 120;
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Input n: ");
+		int n = scan.nextInt();
+		scan.close();
+		
 		while (true)
 		{
 			for (int i = 2; i <= Math.round(n / 2); i++)

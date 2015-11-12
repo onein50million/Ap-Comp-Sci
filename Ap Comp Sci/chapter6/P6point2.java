@@ -12,6 +12,7 @@ public class P6point2
 		System.out.print("Input y: ");
 		int y = scan.nextInt();
 		scan.close();
+		
 		while (x != 0 && y != 0)
 		{
 			if (x > y)

@@ -12,8 +12,10 @@ public class P6point1
 		System.out.print("Enter b: ");
 		int b = scan.nextInt();
 		scan.close();
+		
 		int sum = 0;
 		int sum2 = 0;
+		
 		System.out.println("\nAll odd numbers:");
 		
 		//Outputs all the odd numbers between a and b inclusive
