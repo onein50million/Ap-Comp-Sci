@@ -7,7 +7,7 @@ public class Tester
 
 	public static void main(String[] args)
 	{
-		int[] givenLines = {1, 3, 4,};
+		int[] givenLines = {1, 2, 3, 4, 5};
 		Password p = new Password();
 		String password;
 		while (true)

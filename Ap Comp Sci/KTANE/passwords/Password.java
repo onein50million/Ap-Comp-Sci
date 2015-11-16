@@ -109,13 +109,14 @@ public class Password
 	
 	private String[] generateLetters(String[] line)
 	{
-		while (!checkLine(line))
+		do
 		{
 			for (int i = 1; i < line.length; i++)
 			{
 				line[i] = letters[r.nextInt(letters.length)];
 			}
 		}
+		while (!checkLine(line));
 		return line;
 	}
 	
