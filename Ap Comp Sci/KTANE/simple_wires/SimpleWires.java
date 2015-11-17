@@ -14,7 +14,7 @@ public class SimpleWires
 	
 	private int answer;
 	
-	private boolean even;
+	private boolean odd;
 	private int serial;
 	
 	public String[] getWires()
@@ -48,7 +48,7 @@ public class SimpleWires
 	{
 		wires.clear();
 		serial = r.nextInt(10);
-		even = serial % 2 == 0 ? true : false;
+		odd = serial % 2 == 0 ? false : true;
 		for (int i = 0; i < length; i++)
 		{
 			wires.add(r.nextInt(5));
@@ -80,7 +80,7 @@ public class SimpleWires
 		}
 		else if (length == 4)
 		{
-			if (moreThanOne(4) && !even)
+			if (moreThanOne(4) && odd)
 			{
 				if (wires.get(0) == 4 && wires.get(1) == 4)
 				{
@@ -114,7 +114,7 @@ public class SimpleWires
 		}
 		else if (length == 5)
 		{
-			if (wires.getLast() == 3 && !even)
+			if (wires.getLast() == 3 && odd)
 			{
 				a = 4;
 			}
@@ -133,7 +133,7 @@ public class SimpleWires
 		}
 		else
 		{
-			if (noColor(0) && !even)
+			if (noColor(0) && odd)
 			{
 				a = 3;
 			}
