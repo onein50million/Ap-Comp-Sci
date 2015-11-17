@@ -17,6 +17,11 @@ public class SimpleWires
 	private boolean odd;
 	private int serial;
 	
+	public SimpleWires(int serialNumber)
+	{
+		serial = serialNumber;
+	}
+	
 	public String[] getWires()
 	{
 		String[] vals = new String[wires.size()];
@@ -26,11 +31,6 @@ public class SimpleWires
 			vals[i] = colors[(int) o[i]];
 		}
 		return vals;
-	}
-	
-	public int getSerial()
-	{
-		return serial;
 	}
 	
 	public int getAnswer()
@@ -47,7 +47,6 @@ public class SimpleWires
 	public void newWires(int length)
 	{
 		wires.clear();
-		serial = r.nextInt(10);
 		odd = serial % 2 == 0 ? false : true;
 		for (int i = 0; i < length; i++)
 		{
