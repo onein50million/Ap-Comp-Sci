@@ -6,7 +6,7 @@ import java.util.Random;
 public class SimpleWires
 {
 	// 0 = yellow, 1 = white, 2 = blue, 3 = black, 4 = red
-	final private String[] colors = {"yellow", "white", "blue", "black", "red"};
+	final private String[] colors = {"Yellow", "White", "Blue", "Black", "Red"};
 	
 	private Random r = new Random();
 	
