@@ -28,6 +28,11 @@ public class SimpleWires
 		return vals;
 	}
 	
+	public int getSerial()
+	{
+		return serial;
+	}
+	
 	public int getAnswer()
 	{
 		return answer;
@@ -75,7 +80,7 @@ public class SimpleWires
 		}
 		else if (length == 4)
 		{
-			if (moreThanOne(4) && even)
+			if (moreThanOne(4) && !even)
 			{
 				if (wires.get(0) == 4 && wires.get(1) == 4)
 				{
