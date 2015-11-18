@@ -6,19 +6,19 @@ public class ComplicatedWires
 {
 	//0 == cut, 1 == don't cut, 2 == even, 3 == parallel, 4 == batteries
 	//0 == red, 1 == blue, 2 == star, 3 == led
-	boolean even;
-	boolean pPort;
-	boolean batteries;
+	private boolean even;
+	private boolean pPort;
+	private boolean batteries;
 	
-	Random r = new Random();
+	private Random r = new Random();
 	
-	boolean[] answers = new boolean[6];
-	boolean[] wire1 = new boolean[4];
-	boolean[] wire2 = new boolean[4];
-	boolean[] wire3 = new boolean[4];
-	boolean[] wire4 = new boolean[4];
-	boolean[] wire5 = new boolean[4];
-	boolean[] wire6 = new boolean[4];
+	private boolean[] answers = new boolean[6];
+	private boolean[] wire1 = new boolean[4];
+	private boolean[] wire2 = new boolean[4];
+	private boolean[] wire3 = new boolean[4];
+	private boolean[] wire4 = new boolean[4];
+	private boolean[] wire5 = new boolean[4];
+	private boolean[] wire6 = new boolean[4];
 	
 	
 	public ComplicatedWires(int nBatteries, boolean parallelPort, int serialNumber)

@@ -4,20 +4,20 @@ import java.util.Random;
 
 public class Memory
 {
-	Random r = new Random();
+	private Random r = new Random();
 	
-	int pos1;
-	int num1;
-	int pos2;
-	int num2;
-	int pos3;
-	int num3;
-	int pos4;
-	int num4;
+	private int pos1;
+	private int num1;
+	private int pos2;
+	private int num2;
+	//private int pos3;
+	private int num3;
+	//private int pos4;
+	private int num4;
 	
-	int stage = 0;
-	int display = 0;
-	int[] smallDisplay = {0, 0, 0, 0};
+	private int stage = 0;
+	private int display = 0;
+	private int[] smallDisplay = {0, 0, 0, 0};
 	
 	public void Reset()
 	{
@@ -116,7 +116,7 @@ public class Memory
 				a = positionOf(smallDisplay, 4);
 				num3 = 4;
 			}
-			pos3 = a;
+			//pos3 = a;
 		}
 		else if (stage == 4)
 		{
@@ -140,7 +140,7 @@ public class Memory
 				a = pos2;
 				num4 = smallDisplay[pos2 - 1];
 			}
-			pos4 = a;
+			//pos4 = a;
 		}
 		else if (stage == 5)
 		{

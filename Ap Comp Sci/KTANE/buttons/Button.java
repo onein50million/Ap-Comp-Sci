@@ -10,7 +10,7 @@ public class Button
 	//hold = 0, detonate = 1, abort = 2, press = 3
 	final private String[] words = {"Hold", "Detonate", "Abort", "Press"};
 	
-	Random r = new Random();
+	private Random r = new Random();
 	
 	private int batteries;
 	private boolean CAR;
