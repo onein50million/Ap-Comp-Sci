@@ -10,7 +10,7 @@ public class Tester
 	{
 		Random r = new Random();
 		Scanner scan = new Scanner(System.in);
-		int serial = r.nextInt(10);
+		int serial = r.nextInt(9) + 1;
 		
 		SimpleWires w = new SimpleWires(serial);
 		w.newWires();

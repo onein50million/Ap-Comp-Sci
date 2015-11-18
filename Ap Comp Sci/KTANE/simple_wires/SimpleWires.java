@@ -13,13 +13,11 @@ public class SimpleWires
 	private LinkedList<Integer> wires = new LinkedList<Integer>();
 	
 	private int answer;
-	
 	private boolean odd;
-	private int serial;
 	
 	public SimpleWires(int serialNumber)
 	{
-		serial = serialNumber;
+		odd = serialNumber % 2 == 0 ? false : true;
 	}
 	
 	public String[] getWires()
@@ -47,7 +45,6 @@ public class SimpleWires
 	public void newWires(int length)
 	{
 		wires.clear();
-		odd = serial % 2 == 0 ? false : true;
 		for (int i = 0; i < length; i++)
 		{
 			wires.add(r.nextInt(5));
