@@ -18,6 +18,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 import java.awt.Font;
 
+@SuppressWarnings("serial")
 public class PasswordFrame extends JFrame {
 
 	private JPanel contentPane;
@@ -43,7 +44,6 @@ public class PasswordFrame extends JFrame {
 		Random rand = new Random();
 		pass = new Password();
 		pass.newPassword();
-//		System.out.println(pass.getPassword());
 		letters1 = pass.line1;
 		letters2 = pass.line2;
 		letters3 = pass.line3;
@@ -60,7 +60,7 @@ public class PasswordFrame extends JFrame {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (ClassNotFoundException | InstantiationException
 				| IllegalAccessException | UnsupportedLookAndFeelException e1) {
-			// TODO Auto-generated catch block
+			// Auto-generated catch block
 			e1.printStackTrace();
 		}
 		EventQueue.invokeLater(new Runnable() {
@@ -86,43 +86,43 @@ public class PasswordFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton up1 = new JButton("▲");
+		JButton up1 = new JButton("^");
 		up1.setBounds(10, 10, 50, 50);
 		contentPane.add(up1);
 		
-		JButton up2 = new JButton("▲");
+		JButton up2 = new JButton("^");
 		up2.setBounds(70, 10, 50, 50);
 		contentPane.add(up2);
 		
-		JButton up3 = new JButton("▲");
+		JButton up3 = new JButton("^");
 		up3.setBounds(130, 10, 50, 50);
 		contentPane.add(up3);
 		
-		JButton up4 = new JButton("▲");
+		JButton up4 = new JButton("^");
 		up4.setBounds(190, 10, 50, 50);
 		contentPane.add(up4);
 		
-		JButton up5 = new JButton("▲");
+		JButton up5 = new JButton("^");
 		up5.setBounds(250, 10, 50, 50);
 		contentPane.add(up5);
 		
-		JButton down1 = new JButton("▼");
+		JButton down1 = new JButton("v");
 		down1.setBounds(10, 150, 50, 50);
 		contentPane.add(down1);
 		
-		JButton down2 = new JButton("▼");
+		JButton down2 = new JButton("v");
 		down2.setBounds(70, 150, 50, 50);
 		contentPane.add(down2);
 		
-		JButton down3 = new JButton("▼");
+		JButton down3 = new JButton("v");
 		down3.setBounds(130, 150, 50, 50);
 		contentPane.add(down3);
 		
-		JButton down4 = new JButton("▼");
+		JButton down4 = new JButton("v");
 		down4.setBounds(190, 150, 50, 50);
 		contentPane.add(down4);
 		
-		JButton down5 = new JButton("▼");
+		JButton down5 = new JButton("v");
 		down5.setBounds(250, 150, 50, 50);
 		contentPane.add(down5);
 		
