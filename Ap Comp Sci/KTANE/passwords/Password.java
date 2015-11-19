@@ -19,11 +19,11 @@ public class Password
 			"s", "t", "u", "v", "w", "x", "y", "z"
 	};
 	
-	private String[] line1 = {"", "", "", "", ""};
-	private String[] line2 = {"", "", "", "", ""};
-	private String[] line3 = {"", "", "", "", ""};
-	private String[] line4 = {"", "", "", "", ""};
-	private String[] line5 = {"", "", "", "", ""};
+	public String[] line1 = {"", "", "", "", ""};
+	public String[] line2 = {"", "", "", "", ""};
+	public String[] line3 = {"", "", "", "", ""};
+	public String[] line4 = {"", "", "", "", ""};
+	public String[] line5 = {"", "", "", "", ""};
 	
 	private String password;
 	private Random r = new Random();
