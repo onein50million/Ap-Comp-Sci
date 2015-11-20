@@ -12,6 +12,7 @@ import java.util.Random;
 import java.awt.event.ActionEvent;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -39,7 +40,10 @@ public class PasswordFrame extends JFrame {
 	static int letters4Pos;
 	static int letters5Pos;
 	
-	public static void main(String[] args) {
+	static int correct = 0;
+	static int incorrect = 0;
+	
+	public static void newPass(){
 		
 		Random rand = new Random();
 		pass = new Password();
@@ -55,6 +59,12 @@ public class PasswordFrame extends JFrame {
 		letters3Pos = rand.nextInt(5);
 		letters4Pos = rand.nextInt(5);
 		letters5Pos = rand.nextInt(5);
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		newPass();
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -75,6 +85,8 @@ public class PasswordFrame extends JFrame {
 		});
 	}
 
+
+	
 	/**
 	 * Create the frame.
 	 */
@@ -86,43 +98,43 @@ public class PasswordFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton up1 = new JButton("^");
+		JButton up1 = new JButton("▲");
 		up1.setBounds(10, 10, 50, 50);
 		contentPane.add(up1);
 		
-		JButton up2 = new JButton("^");
+		JButton up2 = new JButton("▲");
 		up2.setBounds(70, 10, 50, 50);
 		contentPane.add(up2);
 		
-		JButton up3 = new JButton("^");
+		JButton up3 = new JButton("▲");
 		up3.setBounds(130, 10, 50, 50);
 		contentPane.add(up3);
 		
-		JButton up4 = new JButton("^");
+		JButton up4 = new JButton("▲");
 		up4.setBounds(190, 10, 50, 50);
 		contentPane.add(up4);
 		
-		JButton up5 = new JButton("^");
+		JButton up5 = new JButton("▲");
 		up5.setBounds(250, 10, 50, 50);
 		contentPane.add(up5);
 		
-		JButton down1 = new JButton("v");
+		JButton down1 = new JButton("▼");
 		down1.setBounds(10, 150, 50, 50);
 		contentPane.add(down1);
 		
-		JButton down2 = new JButton("v");
+		JButton down2 = new JButton("▼");
 		down2.setBounds(70, 150, 50, 50);
 		contentPane.add(down2);
 		
-		JButton down3 = new JButton("v");
+		JButton down3 = new JButton("▼");
 		down3.setBounds(130, 150, 50, 50);
 		contentPane.add(down3);
 		
-		JButton down4 = new JButton("v");
+		JButton down4 = new JButton("▼");
 		down4.setBounds(190, 150, 50, 50);
 		contentPane.add(down4);
 		
-		JButton down5 = new JButton("v");
+		JButton down5 = new JButton("▼");
 		down5.setBounds(250, 150, 50, 50);
 		contentPane.add(down5);
 		
@@ -157,41 +169,39 @@ public class PasswordFrame extends JFrame {
 		contentPane.add(label5);
 		
 		JButton submit = new JButton("SUBMIT");
-		submit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				if((label1.getText()+label2.getText()+label3.getText()+label4.getText()+label5.getText()).equals(pass.getPassword())){
-					System.out.println("correct!");
-					pass.newPassword();
-					
-					Random rand = new Random();
-					
-//					System.out.println(pass.getPassword());
-					
-					letters1 = pass.line1;
-					letters2 = pass.line2;
-					letters3 = pass.line3;
-					letters4 = pass.line4;
-					letters5 = pass.line5;
-					
-					letters1Pos = rand.nextInt(5);
-					letters2Pos = rand.nextInt(5);
-					letters3Pos = rand.nextInt(5);
-					letters4Pos = rand.nextInt(5);
-					letters5Pos = rand.nextInt(5);
-					label1.setText(letters1[letters1Pos]);
-					label2.setText(letters2[letters2Pos]);
-					label3.setText(letters3[letters3Pos]);
-					label4.setText(letters4[letters4Pos]);
-					label5.setText(letters5[letters5Pos]);
-				}
-				else{
-					System.out.println("wrong!");
-				}
-				
-			}
-		});
 		submit.setBounds(310, 80, 100, 50);
 		contentPane.add(submit);
+		
+		JLabel incorrectLabel = new JLabel("Incorrect: 0");
+		incorrectLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		incorrectLabel.setBounds(296, 226, 128, 25);
+		contentPane.add(incorrectLabel);
+		
+		JLabel correctLabel = new JLabel("Correct: 0");
+		correctLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		correctLabel.setBounds(10, 226, 128, 25);
+		contentPane.add(correctLabel);
+		
+		JButton reset = new JButton("Give Up");
+		reset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "The password was " + pass.getPassword());
+				newPass();
+				
+				label1.setText(letters1[letters1Pos]);
+				label2.setText(letters2[letters2Pos]);
+				label3.setText(letters3[letters3Pos]);
+				label4.setText(letters4[letters4Pos]);
+				label5.setText(letters5[letters5Pos]);
+				
+				incorrect = 0;
+				correct = 0;
+				incorrectLabel.setText("Incorrect: " + incorrect);
+				correctLabel.setText("Correct: " + correct);
+			}
+		});
+		reset.setBounds(165, 226, 69, 25);
+		contentPane.add(reset);
 	
 		//first buttons
 		up1.addActionListener(new ActionListener() {
@@ -260,6 +270,31 @@ public class PasswordFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				letters5Pos = Math.floorMod(letters5Pos - 1, letters5.length);
 				label5.setText(letters5[letters5Pos]);
+			}
+		});
+		
+		submit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if((label1.getText()+label2.getText()+label3.getText()+label4.getText()+label5.getText()).equals(pass.getPassword())){
+					System.out.println("correct!");
+					
+					newPass();
+					label1.setText(letters1[letters1Pos]);
+					label2.setText(letters2[letters2Pos]);
+					label3.setText(letters3[letters3Pos]);
+					label4.setText(letters4[letters4Pos]);
+					label5.setText(letters5[letters5Pos]);
+					
+					correct++;
+					correctLabel.setText("Correct: " + correct);
+				}
+				else{
+					System.out.println("wrong!");
+					incorrect++;
+					incorrectLabel.setText("Incorrect: " + incorrect);
+
+				}
+				
 			}
 		});
 		
